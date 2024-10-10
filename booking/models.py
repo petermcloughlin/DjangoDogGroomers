@@ -21,7 +21,7 @@ class Booking(models.Model):
 
     service = models.CharField(choices=SERVICES)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='booking_booking')
-    appointmentDay = models.DateTimeField()
+    appointmentDay = models.DateTimeField(null=True, blank=True)
 
     
 
