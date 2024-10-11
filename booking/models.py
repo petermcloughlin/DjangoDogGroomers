@@ -23,7 +23,13 @@ class Booking(models.Model):
     staff = models.IntegerField(choices=STAFF, default=0)
     appointmentDay = models.DateTimeField(null=True, blank=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='booking_booking')
-    ordering = ['-appointmentDay']
+
+    class Meta:
+        ordering = ["appointmentDay"]
+
+    def __str__(self):       
+        return f"Booking for {self.created_by} | {self.appointmentDay.strftime('%B %d, %Y at %I:%M %p')}"
+
     
 
     
