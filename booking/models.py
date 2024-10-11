@@ -19,9 +19,12 @@ class Booking(models.Model):
         (6 , 'Therapy Bath')
     ]
 
-    service = models.CharField(choices=SERVICES)
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='booking_booking')
+    service = models.IntegerField(choices=SERVICES)   
+    staff = models.IntegerField(choices=STAFF, default=0)
     appointmentDay = models.DateTimeField(null=True, blank=True)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='booking_booking')
+    ordering = ['-appointmentDay']
+    
 
     
 
