@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 # from booking import views as index_views
 
-urlpatterns = [
-    path('booking/', include('booking.urls'), name='booking-urls'),
-    path('admin/', admin.site.urls),
+urlpatterns = [       
+    path('admin/', admin.site.urls),   
+    path('', include('booking.urls')),  
 ]

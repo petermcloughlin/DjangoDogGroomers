@@ -18,7 +18,7 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # 'django-insecure-rosewz+*(ass1$u%k47n-b_-n3^fs7lddgw&ocd=bke9-*s#4('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-petermcloug-djangodoggr-2y08e9wd0um.ws.codeinstitute-ide.net'
                 ,'.herokuapp.com']
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'doggroomers.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
