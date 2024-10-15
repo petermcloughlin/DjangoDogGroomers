@@ -1,8 +1,9 @@
 body {
     background-color: #fafafa;
 }
-
-/* NavBar*/
-.nav-background {
+nav {
     background-color: #378335;
+}
+i {
+    color:#fafafa
 }
