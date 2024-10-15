@@ -1,9 +1,25 @@
 body {
     background-color: #fafafa;
 }
+/* Nav bar*/
 nav {
-    background-color: #378335;
+    background-color: #353354;
 }
 i {
-    color:#fafafa
+    color:#fafafa;   
+}
+
+/* Footer */
+footer {
+    background-color: #353354;
+}
+
+.footer-content {    
+    color: #fafafa;
+}
+.footer-content ul li {
+    list-style-type: none;
+}
+.footer span {
+    color: #fafafa;
 }
