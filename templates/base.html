@@ -1,3 +1,5 @@
+{% load static %}
+
 {% url 'home' as home_url %}
 
 <!DOCTYPE html>
@@ -11,13 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Leaflet JS for Maps -->        
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -28,8 +30,9 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark nav-container nav-background">
         <div class="container-fluid">
+            <a class="navbar-brand logo" href="#" alt="Dog Grooming"></a>
             <a class="navbar-brand" href="#">Bandon Dog Groomers</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +44,18 @@
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="#">Home</a>
                     </li>
-
+                    <li class="nav-item"></li>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="#">Profile</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                            href="#">Login</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link {% if request.path == register_url %}active{% endif %}" aria-current="page"
+                            href="#">Register</a>
+                    </li>
                 </ul>
                 <!-- <span class="navbar-text text-muted">
                     adventures of a software developer
@@ -49,7 +63,13 @@
             </div>
         </div>
     </nav>
-
+    <div class="container-fluid">          
+        <div class="row">               
+           <div class="d-flex justify-content-center mt-auto sl-box">
+                 <h1 id="slogan">Best of Bandon's K-9 care!</h1>
+           </div>
+        </div>
+     </div>
     <main class="flex-shrink-0 main-bg">
 
         {% block content %}
@@ -98,15 +118,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-        </script>
-    <script>     
-        var map = L.map('map');
-        map.setView([51.8555, -8.555], 10);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);        
-    </script>
+        </script>    
 </body>
 
 </html>
