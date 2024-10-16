@@ -6,7 +6,10 @@ nav {
     background-color: #353354;
 }
 i {
-    color:#fafafa;   
+    color:#f2b30d; 
+}
+.nav-link:hover{
+    color: #f2b30d;
 }
 
 /* Footer */
@@ -17,9 +20,11 @@ footer {
 .footer-content {    
     color: #fafafa;
 }
+
 .footer-content ul li {
     list-style-type: none;
 }
+
 .footer span {
-    color: #fafafa;
+    color: #f2b30d;
 }
