@@ -1,0 +1,30 @@
+body {
+    background-color: #fafafa;
+}
+/* Nav bar*/
+nav {
+    background-color: #353354;
+}
+i {
+    color:#f2b30d; 
+}
+.nav-link:hover{
+    color: #f2b30d;
+}
+
+/* Footer */
+footer {
+    background-color: #353354;
+}
+
+.footer-content {    
+    color: #fafafa;
+}
+
+.footer-content ul li {
+    list-style-type: none;
+}
+
+.footer span {
+    color: #f2b30d;
+}
