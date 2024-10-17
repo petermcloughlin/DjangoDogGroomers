@@ -34,3 +34,14 @@ footer {
 .footer span {
     color: #f2b30d;
 }
+
+#map {
+    margin-top: 10px;
+    padding-top: 20px;
+    height: 190px; 
+    width: auto;
+}
+
+.social-links li a i:hover{
+    color: #fafafa;
+}
