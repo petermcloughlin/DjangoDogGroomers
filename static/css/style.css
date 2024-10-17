@@ -1,5 +1,6 @@
 body {
     background-color: #fafafa;
+    padding-top: 100px;
 }
 /* Nav bar*/
 nav {
@@ -13,7 +14,7 @@ i {
     width: 50px;
 }
 .nav-link:hover{
-    color: #f2b30d;
+    color: #f2b30d !important; 
 }
 /* Booking list*/
 
