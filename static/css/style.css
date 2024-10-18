@@ -16,6 +16,7 @@ i {
 .nav-link:hover{
     color: #f2b30d !important; 
 }
+
 /* Booking list*/
 
 /* Footer */
@@ -46,7 +47,7 @@ footer {
 #map {
     margin-top: 10px;
     padding-top: 20px;
-    height: 190px; 
+    height: 210px; 
     width: auto;
 }
 
