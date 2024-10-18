@@ -1,5 +1,6 @@
 body {
     background-color: #fafafa;
+    padding-top: 100px;
 }
 /* Nav bar*/
 nav {
@@ -8,9 +9,14 @@ nav {
 i {
     color:#f2b30d; 
 }
-.nav-link:hover{
-    color: #f2b30d;
+#logo {
+    height: 50px;
+    width: 50px;
 }
+.nav-link:hover{
+    color: #f2b30d !important; 
+}
+/* Booking list*/
 
 /* Footer */
 footer {
@@ -21,10 +27,32 @@ footer {
     color: #fafafa;
 }
 
+.footer-content > ul {
+    padding-top: 20px;
+}
+
 .footer-content ul li {
     list-style-type: none;
 }
 
+.footer-content ul li h5 {
+    color: #f2b30d;
+}
+
 .footer span {
     color: #f2b30d;
+}
+
+#map {
+    margin-top: 10px;
+    padding-top: 20px;
+    height: 190px; 
+    width: auto;
+}
+
+.social-links li ~ li {
+    padding-left: 10px;
+}
+.social-links li a i:hover{
+    color: #fafafa;
 }
