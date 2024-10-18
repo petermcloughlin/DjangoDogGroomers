@@ -27,8 +27,16 @@ footer {
     color: #fafafa;
 }
 
+.footer-content > ul {
+    padding-top: 20px;
+}
+
 .footer-content ul li {
     list-style-type: none;
+}
+
+.footer-content ul li h5 {
+    color: #f2b30d;
 }
 
 .footer span {
@@ -42,6 +50,9 @@ footer {
     width: auto;
 }
 
+.social-links li ~ li {
+    padding-left: 10px;
+}
 .social-links li a i:hover{
     color: #fafafa;
 }
