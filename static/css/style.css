@@ -51,6 +51,11 @@ footer {
     width: auto;
 }
 
+.social-links li a i {
+    width: 32px;
+    height: 32px;    
+}
+
 .social-links li ~ li {
     padding-left: 10px;
 }
