@@ -2,7 +2,7 @@ body {
     background-color: #fafafa;
     padding-top: 100px;
 }
-/* Nav bar*/
+/* ---------------------------------------------------------- Nav bar*/
 nav {
     background-color: #353354;
 }
@@ -16,10 +16,37 @@ i {
 .nav-link:hover{
     color: #f2b30d !important; 
 }
+/* --------------------------------------------------- Hero section */
 
-/* Booking list*/
+.hero {
+    background: url('/static/images/dogs_watching.webp') no-repeat center top;
+    min-height: 700px;
+    width: 100%;
+    margin-top: -40px;     
+    padding-top: 0px;
+    padding-left: 20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; 
+}
+#hero-text {    
+    color: #353354;
+    font-weight: 600;  
+    font-size: 40px;  
+    text-shadow: -2px -2px 7px rgba(0,0,0,.4), -2px -2px 3px rgba(255,255,255,.6);
+}
 
-/* Footer */
+.sl-box {
+    height: 120px;    
+    flex-direction: row;        
+    align-items: flex-end;
+    letter-spacing: 3px;
+}
+/* ---------------------------------------------------- Booking list*/
+
+/* ----------------------------------------------------------Footer */
 footer {
     background-color: #353354;
 }
