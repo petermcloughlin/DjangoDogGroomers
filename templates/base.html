@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'profile' as profile_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -66,8 +67,8 @@
                 <ul class="navbar-nav ms-auto">    
                     {% if user.is_authenticated %} 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" 
-                        href="{% url 'home' %}">Welcome {{ user }}</a>
+                        <a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page" 
+                        href="{% url 'profile' %}">Welcome {{ user }}</a>
                     </li>                                       
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
@@ -90,7 +91,7 @@
     
     <div class="container-fluid">          
         <div class="row">               
-           <div class="d-flex justify-content-center mt-auto sl-box">
+           <div class="d-flex justify-content-center mt-auto sl-box">                  
                  <h1 id="slogan">Best of Bandon's K-9 care!</h1>
            </div>
         </div>

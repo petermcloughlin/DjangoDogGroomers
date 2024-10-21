@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="padding-bottom: 10px;">
+  <div class="row justify-content-center" id="booking-table">
+    <div class="col-md-8">
+      <table class="table table-striped table-hover">          
+          <thead>
+              <tr>              
+                <th scope="col">Groom</th>
+                <th scope="col">Staff</th>
+                <th scope="col">Date</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>          
+            <tbody>           
+                {% for booking in bookings %}
+                <tr>              
+                  <td>{{ booking.get_service_display }}</td>
+                  <td>{{ booking.get_staff_display }}</td>
+                  <td>{{ booking.appointmentDay }}</td>
+                  <td><button type="button" class="btn btn-edit btn-outline-warning"
+                    data-booking_id="{{ booking.id }}">Edit</button> 
+                    | 
+                    <button type="button" class="btn btn-delete btn-outline-danger"
+                    data-booking_id="{{ booking.id }}">Delete</button> 
+                    </td>
+                </tr>
+                {% endfor %}           
+            </tbody>         
+      </table>      
+    </div>    
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-outline-success">Book Appointment</button>  
+    </div>
+  </div>
+</div>
+
+{% endblock %}
