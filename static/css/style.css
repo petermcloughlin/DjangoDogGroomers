@@ -32,12 +32,12 @@ i {
     background-size: cover;
     position: relative; 
 }
-#hero-text {    
+/* #hero-text {    
     color: #fafafa;
-    font-weight: 600;  
-    font-size: 40px;  
+    font-weight: 300;  
+    font-size: 20px;  
     text-shadow: -2px -2px 7px rgba(0,0,0,.4), -2px -2px 3px rgba(255,255,255,.6);
-}
+} */
 
 .sl-box {
     height: 120px;    
@@ -49,10 +49,15 @@ i {
 .card {
     margin: 10px;
 }
+.card-header h3 {
+    color:#353354;
+}
 #services h3 ,
 #gallery h3 {
-    text-align: center;
+    text-align: center;   
+    color:#353354; 
 }
+
 /* ---------------------------------------------------- Booking list*/
 
 /* ----------------------------------------------------------Footer */
