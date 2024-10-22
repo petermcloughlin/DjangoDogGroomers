@@ -2,7 +2,7 @@ body {
     background-color: #fafafa;
     padding-top: 100px;
 }
-/* Nav bar*/
+/* ---------------------------------------------------------- Nav bar*/
 nav {
     background-color: #353354;
 }
@@ -16,9 +16,51 @@ i {
 .nav-link:hover{
     color: #f2b30d !important; 
 }
-/* Booking list*/
+/* --------------------------------------------------- Hero section */
 
-/* Footer */
+.hero {
+    background: url('/static/images/dog_face.webp') no-repeat center top;
+    min-height: 300px;
+    width: 100%;
+    margin-top: -40px;     
+    padding-top: 0px;
+    padding-left: 30px;
+    align-self: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; 
+}
+#hero-text {    
+    color: #fafafa;
+    font-weight: 300;  
+    font-size: 20px;  
+    text-shadow: -2px -2px 7px rgba(0,0,0,.4), -2px -2px 3px rgba(255,255,255,.6);
+}
+
+.sl-box {
+    height: 120px;    
+    flex-direction: row;        
+    align-items: flex-end;
+    letter-spacing: 3px;
+}
+/* ------------------------------------------------------ index.html*/
+.card {
+    margin: 10px;
+}
+.card-header h3 {
+    color:#353354;
+}
+#services h3 ,
+#gallery h3 {
+    text-align: center;   
+    color:#353354; 
+}
+
+/* ---------------------------------------------------- Booking list*/
+
+/* ----------------------------------------------------------Footer */
 footer {
     background-color: #353354;
 }
@@ -46,7 +88,7 @@ footer {
 #map {
     margin-top: 10px;
     padding-top: 20px;
-    height: 190px; 
+    height: 210px; 
     width: auto;
 }
 
@@ -55,4 +97,11 @@ footer {
 }
 .social-links li a i:hover{
     color: #fafafa;
+}
+
+/* Larger screens hide the hero image */
+@media screen and (min-width: 768px){
+    .hero {
+        display: none;
+    }     
 }
