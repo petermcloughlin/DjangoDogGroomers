@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="padding-bottom: 10px;">
+  <div class="row justify-content-center">
+    <div class="d-grid gap-2 col-md-4 mx-auto">      
+      <p class="no-bookings">You have no appointments at this time.</p>    
+      <p class="no-bookings">To book your dog in, click below.</p>      
+      <button type="button" class="btn btn-outline-success">Book Appointment</button>  
+    </div>   
+  </div>    
+</div>
+
+{% endblock %}

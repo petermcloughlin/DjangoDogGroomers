@@ -18,13 +18,19 @@ def profile(request):
     Welcome {{ user }} displays this when clicked.
     '''    
     # Get the list of bookings where created_by is the current user
-    bookings = get_list_or_404(Booking, created_by=request.user)  
-    
-    return render(
-        request,
-        "booking/profile.html", 
-        {"bookings": bookings}
-        )
+    # bookings = get_list_or_404(Booking, created_by=request.user)  
+    bookings = list(Booking.objects.filter(created_by=request.user))
+    if not bookings:       
+        return render(
+            request,
+            "booking/profile-no-booking.html"
+            )
+    else:
+        return render(
+            request,
+            "booking/profile.html", 
+            {"bookings": bookings}
+            )
     
     
 

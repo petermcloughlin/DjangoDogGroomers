@@ -59,7 +59,14 @@ i {
 }
 
 /* ---------------------------------------------------- Booking list*/
-
+.no-bookings {
+    color:#353354;
+    text-align: center;
+    font-weight: bold;
+}
+.booking-header {
+    text-align: center;
+}
 /* ----------------------------------------------------------Footer */
 footer {
     background-color: #353354;
