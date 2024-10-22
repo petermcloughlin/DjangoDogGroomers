@@ -19,12 +19,13 @@ i {
 /* --------------------------------------------------- Hero section */
 
 .hero {
-    background: url('/static/images/dogs_watching.webp') no-repeat center top;
-    min-height: 700px;
+    background: url('/static/images/dog_face.webp') no-repeat center top;
+    min-height: 300px;
     width: 100%;
     margin-top: -40px;     
     padding-top: 0px;
-    padding-left: 20px;
+    padding-left: 30px;
+    align-self: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,7 +33,7 @@ i {
     position: relative; 
 }
 #hero-text {    
-    color: #353354;
+    color: #fafafa;
     font-weight: 600;  
     font-size: 40px;  
     text-shadow: -2px -2px 7px rgba(0,0,0,.4), -2px -2px 3px rgba(255,255,255,.6);
@@ -43,6 +44,14 @@ i {
     flex-direction: row;        
     align-items: flex-end;
     letter-spacing: 3px;
+}
+/* ------------------------------------------------------ index.html*/
+.card {
+    margin: 10px;
+}
+#services h3 ,
+#gallery h3 {
+    text-align: center;
 }
 /* ---------------------------------------------------- Booking list*/
 
@@ -83,4 +92,11 @@ footer {
 }
 .social-links li a i:hover{
     color: #fafafa;
+}
+
+/* Larger screens hide the hero image */
+@media screen and (min-width: 768px){
+    .hero {
+        display: none;
+    }     
 }
