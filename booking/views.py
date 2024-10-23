@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404, reverse
 from django.views import generic
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Booking
+from .forms import BookingForm
 from django.contrib.auth.models import User
+
 # from django.http import HttpResponse
 
 # Create your views here.
@@ -32,6 +35,34 @@ def profile(request):
             {"bookings": bookings}
             )
     
+
+def booking_page(request):
+    if request.method == "POST":
+        booking_form = BookingForm(data=request.POST)
+        if booking_form.is_valid():
+            booking = booking_form.save(commit=False)
+            booking.created_by = request.user
+            booking.save()
+            return render(
+                request,
+                "booking/index.html"
+                )
+            # messages.add_message(
+            #     request, messages.SUCCESS,
+            #     'Thanks you. We look forward to seeing you.'
+            # )
+
+    booking_form = BookingForm()
+
+    return render(
+        request,
+        "profile/booking.html",
+        {
+            "booking_form": booking_form,
+        },
+    )
+
+
     
 
     
