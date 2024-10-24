@@ -56,7 +56,7 @@ def booking_page(request):
 
     return render(
         request,
-        "profile/booking.html",
+        "booking/booking.html",
         {
             "booking_form": booking_form,
         },

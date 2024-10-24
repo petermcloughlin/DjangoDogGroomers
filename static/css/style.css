@@ -67,6 +67,11 @@ i {
 .booking-header {
     text-align: center;
 }
+/* ---------------------------------------------------- Booking Form*/
+#user-greeting {
+    color: #353354;
+    font-weight: bold;
+}
 /* ----------------------------------------------------------Footer */
 footer {
     background-color: #353354;
