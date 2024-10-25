@@ -15,7 +15,7 @@
           {{ booking_form | crispy }}
           {% csrf_token %}
           <button id="submitButton" type="submit"
-            class="btn btn-signup btn-outline-success btn-lg">Submit</button>
+            class="btn btn-signup btn-outline-success">Book Appointment</button>
         </form>
         {% else %}
         <p>Log in to make an appointment with us.</p>

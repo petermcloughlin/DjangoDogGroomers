@@ -19,6 +19,12 @@ def profile(request):
     '''
     Display the user's list of bookings when logged in. 
     Welcome {{ user }} displays this when clicked.
+
+    This page will show any previously listed bookings made by the user,
+    including options for the user to Edit or Delete each booking.
+    If the user has no bookings made previously, it will show a default 
+    message on the page with an option to allow the user to make a new 
+    booking.     
     '''    
     # Get the list of bookings where created_by is the current user
     # bookings = get_list_or_404(Booking, created_by=request.user)  
@@ -37,6 +43,11 @@ def profile(request):
     
 
 def booking_page(request):
+    '''
+    Display the booking page with a crispy form allowing 
+    the user to select a service, staff member and date, 
+    using the datetimepicker.    
+    '''
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
@@ -47,10 +58,10 @@ def booking_page(request):
                 request,
                 "booking/index.html"
                 )
-            # messages.add_message(
-            #     request, messages.SUCCESS,
-            #     'Thanks you. We look forward to seeing you.'
-            # )
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Thank you for booking with us. We look forward to seeing you.'
+            )
 
     booking_form = BookingForm()
 

@@ -16,6 +16,11 @@ i {
 .nav-link:hover{
     color: #f2b30d !important; 
 }
+/* --------------------------------------------------- Messages section */
+.message-align-fix {
+    color: #353354;
+    margin-bottom: 5px;
+}
 /* --------------------------------------------------- Hero section */
 
 .hero {
@@ -66,6 +71,9 @@ i {
 }
 .booking-header {
     text-align: center;
+    color: #353354;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 /* ---------------------------------------------------- Booking Form*/
 #user-greeting {
