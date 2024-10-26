@@ -73,8 +73,7 @@ def booking_page(request):
         },
     )
 
-
-
+        
 
     
 
