@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, get_list_or_404, reverse
+from django.shortcuts import redirect, render, get_object_or_404, get_list_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -71,6 +71,26 @@ def booking_page(request):
         {
             "booking_form": booking_form,
         },
+    )
+
+
+def update_view(request, bk_id):
+    '''
+    Update form to display to allow user to update their existing booking
+    '''
+    obj = Booking.objects.get(pk=bk_id)
+    form = BookingForm(instance=obj)
+    if request.method == 'POST':
+       form = BookingForm(request.POST, instance=obj) 
+    if form.is_valid():
+        form.save()
+        return redirect('profile')
+    template_name = 'booking/edit.html'    
+    context = {'form': form}
+    return render(
+        request,
+        template_name,
+        context
     )
 
         
