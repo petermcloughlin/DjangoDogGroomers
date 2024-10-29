@@ -23,8 +23,9 @@
                   <td>{{ booking.appointmentDay }}</td>
                   <td><button class="btn btn-warning"><a href="{% url 'update_url' booking.id %}">Update</a></button>                
                     | 
-                    <button type="button" class="btn btn-delete btn-outline-danger"
-                    data-booking_id="{{ booking.id }}">Delete</button> 
+                    <button class="btn btn-danger"><a href="{% url 'delete_url' booking.id %}">Delete</a></button> 
+                    <!-- <button type="button" class="btn btn-delete btn-outline-danger"
+                    data-booking_id="{{ booking.id }}">Delete</button>  -->
                     </td>
                 </tr>
                 {% endfor %}           

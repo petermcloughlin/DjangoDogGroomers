@@ -84,7 +84,11 @@ def update_view(request, bk_id):
        form = BookingForm(request.POST, instance=obj) 
     if form.is_valid():
         form.save()
-        return redirect('profile')
+        messages.add_message(
+                request, messages.SUCCESS,
+                'Your appointment has been updated.'
+            )
+        return redirect('profile')        
     template_name = 'booking/edit.html'    
     context = {'form': form}
     return render(
@@ -93,6 +97,26 @@ def update_view(request, bk_id):
         context
     )
 
+
+def delete_view(request, bk_id):
+    ''' 
+    Delete a users existing appointment
+    '''
+    obj = Booking.objects.get(pk=bk_id)
+    if request.method == 'POST':
+        obj.delete()        
+        messages.add_message(
+                request, messages.SUCCESS,
+                'Your appointment has been deleted.'
+            )
+        return redirect('profile')
+    template_name = 'booking/delete.html'    
+    context = {'obj': obj}
+    return render(
+        request,
+        template_name,
+        context
+    )
         
 
     
