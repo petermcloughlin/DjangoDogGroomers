@@ -122,7 +122,7 @@ footer {
 }
 
 .social-links li ~ li {
-    padding-left: 7px;
+    padding-left: 8px;
 }
 .social-links li a i:hover{
     color: #fafafa;
