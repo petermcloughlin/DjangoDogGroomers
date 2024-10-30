@@ -52,15 +52,20 @@ i {
 }
 /* ------------------------------------------------------ index.html*/
 .card {
+    align-items: center;
+    align-content: center; 
+    text-align: center;   
     margin: 10px;
 }
 .card-header h3 {
     color:#353354;
 }
-.card-body i {
+.card-body {
+    align-items: center;
     align-content: center;
-    size: 1.5rem;
+    text-align: center;
 }
+
 #services h3 ,
 #gallery h3 {
     text-align: center;   
@@ -117,7 +122,7 @@ footer {
 }
 
 .social-links li ~ li {
-    padding-left: 10px;
+    padding-left: 7px;
 }
 .social-links li a i:hover{
     color: #fafafa;
