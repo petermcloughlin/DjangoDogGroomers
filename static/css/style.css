@@ -57,6 +57,10 @@ i {
 .card-header h3 {
     color:#353354;
 }
+.card-body i {
+    align-content: center;
+    size: 1.5rem;
+}
 #services h3 ,
 #gallery h3 {
     text-align: center;   
