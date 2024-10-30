@@ -207,9 +207,12 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>   
     <script src="https://kit.fontawesome.com/4f323c782a.js" crossorigin="anonymous"></script> 
-    <script>     
-        var map = L.map('map');
-        map.setView([51.8555, -8.555], 10);
+    <script>   
+        
+        var map = L.map('map');    
+        var marker = L.marker([51.730, -8.700]).addTo(map);   
+        marker.bindPopup("<b>Here we are!</b><br>Just south of the Bandon Relief Road.").openPopup();  
+        map.setView([51.730, -8.700], 10);    
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
