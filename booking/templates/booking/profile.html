@@ -21,9 +21,9 @@
                   <td>{{ booking.get_service_display }}</td>
                   <td>{{ booking.get_staff_display }}</td>
                   <td>{{ booking.appointmentDay }}</td>
-                  <td><button class="btn btn-warning"><a href="{% url 'update_url' booking.id %}">Update</a></button>                
+                  <td><a href="{% url 'update_url' booking.id %}" class="btn btn-warning" type="button">Update</a>               
                     | 
-                    <button class="btn btn-danger"><a href="{% url 'delete_url' booking.id %}">Delete</a></button> 
+                    <a href="{% url 'delete_url' booking.id %}" class="btn btn-danger" type="button">Delete</a>
                     <!-- <button type="button" class="btn btn-delete btn-outline-danger"
                     data-booking_id="{{ booking.id }}">Delete</button>  -->
                     </td>
