@@ -54,14 +54,15 @@ def booking_page(request):
             booking = booking_form.save(commit=False)
             booking.created_by = request.user
             booking.save()
-            return render(
-                request,
-                "booking/index.html"
-                )
             messages.add_message(
                 request, messages.SUCCESS,
                 'Thank you for booking with us. We look forward to seeing you.'
             )
+            return render(
+                request,
+                "booking/index.html"
+            )
+            
 
     booking_form = BookingForm()
 
