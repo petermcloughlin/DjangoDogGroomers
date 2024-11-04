@@ -66,10 +66,11 @@ i {
     align-content: center;
     text-align: center;
     color: #353354;
+    font-weight: bold; 
 }
 .card-body .card-text{
     color: #353354;
-    font-weight: bold;
+    font-weight: bold;   
 }
 #services h3 ,
 #gallery h3 {
