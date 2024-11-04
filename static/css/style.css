@@ -68,7 +68,7 @@ i {
     color: #353354;
     font-weight: bold; 
 }
-.card-body .card-text{
+.card-body .card-text a {
     color: #353354;
     font-weight: bold;   
 }
