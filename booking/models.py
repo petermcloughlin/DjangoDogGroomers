@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your models here.
 class Booking(models.Model):
@@ -19,7 +20,7 @@ class Booking(models.Model):
         (6 , 'Therapy Bath')
     ]
 
-    service = models.IntegerField(choices=SERVICES)   
+    service = models.IntegerField(choices=SERVICES, default=0)   
     staff = models.IntegerField(choices=STAFF, default=0)
     appointmentDay = models.DateTimeField(null=True, blank=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='booking_booking')

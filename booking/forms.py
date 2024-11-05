@@ -8,7 +8,8 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ('service', 'staff', 'appointmentDay',)
         widgets = {
-            'appointmentDay' : forms.widgets.DateTimeInput(attrs={'type': 'datetime-local'})
+            'appointmentDay' : forms.widgets.DateTimeInput(attrs={'type': 'datetime-local'
+            , 'required': 'required'})
         }
 
 
