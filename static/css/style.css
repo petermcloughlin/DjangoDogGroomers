@@ -72,6 +72,9 @@ i {
     color: #353354;
     font-weight: bold;   
 }
+.card-body .card-text a:hover{
+    color:#f2b30d !important;
+}
 #services h3 ,
 #gallery h3 {
     text-align: center;   
