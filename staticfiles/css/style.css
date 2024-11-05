@@ -52,10 +52,28 @@ i {
 }
 /* ------------------------------------------------------ index.html*/
 .card {
+    align-items: center;
+    align-content: center; 
+    text-align: center;   
     margin: 10px;
+    font-weight: bold;
 }
 .card-header h3 {
     color:#353354;
+}
+.card-body {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #353354;
+    font-weight: bold; 
+}
+.card-body .card-text a {
+    color: #353354;
+    font-weight: bold;   
+}
+.card-body .card-text a:hover{
+    color:#f2b30d !important;
 }
 #services h3 ,
 #gallery h3 {
@@ -113,7 +131,7 @@ footer {
 }
 
 .social-links li ~ li {
-    padding-left: 10px;
+    padding-left: 8px;
 }
 .social-links li a i:hover{
     color: #fafafa;
