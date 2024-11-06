@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <!-- <h3>{% trans "Sign In" %}</h3> -->
-            <h3>Sign In</h3>
+            <h3 id="login-heading">Sign In</h3>
             <p>{% blocktrans %}Welcome back to Bandon Dog Groomers. To join us and book your dogs appoinment, please log in. If
                 you
                 have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
@@ -26,7 +26,7 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}                
-                <button class="btn btn-outline-success" type="submit">{% trans "Sign In" %}</button>
+                <button id="login-button" class="btn btn-outline" type="submit">{% trans "Sign In" %}</button>
             </form>
         </div>
     </div>
