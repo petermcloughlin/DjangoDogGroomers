@@ -98,6 +98,26 @@ i {
     color: #353354;
     font-weight: bold;
 }
+/* --------------------------------------------------- Sign Up Form */
+#sign-up-heading{
+    color:#353354;
+}
+#sign-up-button{
+    background-color: #f2b30d; 
+    color:#353354;
+}
+/* ----------------------------------------------------- Login Form */
+#login-heading{
+    color:#353354;
+}
+#login-button{
+    background-color: #f2b30d; 
+    color:#353354;
+}
+/* -------------------------------------------------- Sign Out Form */
+#sign-out-heading{
+    color:#353354;
+}
 /* ----------------------------------------------------------Footer */
 footer {
     background-color: #353354;
