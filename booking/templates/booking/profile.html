@@ -20,7 +20,7 @@
                 <tr>              
                   <td>{{ booking.get_service_display }}</td>
                   <td>{{ booking.get_staff_display }}</td>
-                  <td>{{ booking.appointmentDay }}</td>
+                  <td>{{ booking.appointment }}</td>
                   <td><a href="{% url 'update_url' booking.id %}" class="btn btn-warning" type="button">Update</a>               
                     | 
                     <a href="{% url 'delete_url' booking.id %}" class="btn btn-danger" type="button">Delete</a>

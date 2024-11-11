@@ -6,9 +6,9 @@ from django.forms import widgets, DateTimeField, DateTimeInput
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ('service', 'staff', 'appointmentDay',)
+        fields = ('service', 'staff', 'appointment',)
         widgets = {
-            'appointmentDay' : forms.widgets.DateTimeInput(attrs={'type': 'datetime-local'
+            'appointment' : forms.widgets.DateTimeInput(attrs={'type': 'datetime-local'
             , 'required': 'required'})
         }
 
