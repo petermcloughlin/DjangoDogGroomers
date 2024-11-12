@@ -16,6 +16,9 @@ from django.contrib.auth.models import User
 
 
 def home(request):
+    '''
+    Displays the homepage - index.html
+    '''
     return render(request, "booking/index.html")
 
 
@@ -51,6 +54,8 @@ def booking_page(request):
     Display the booking page with a crispy form allowing
     the user to select a service, staff member and date,
     using the datetimepicker.
+    Post request handles the submission of a booking by
+    the user on the booking form.
     '''
     if request.method == "POST":
         booking_form = BookingForm(data=request.POST)
@@ -80,6 +85,7 @@ def booking_page(request):
 def update_view(request, bk_id):
     '''
     Update form to display to allow user to update their existing booking
+    The Post request handles the submission of the updated form.
     '''
     obj = Booking.objects.get(pk=bk_id)
     form = BookingForm(instance=obj)
@@ -103,7 +109,11 @@ def update_view(request, bk_id):
 
 def delete_view(request, bk_id):
     '''
-    Delete a users existing appointment
+    Delete a users existing appointment.
+    Handles the deletion of a booking record
+    selected by the user from their list bookings.
+    Prompts the user with a confirmation page
+    before deleting the booking.
     '''
     obj = Booking.objects.get(pk=bk_id)
     if request.method == 'POST':
