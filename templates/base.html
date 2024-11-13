@@ -40,7 +40,7 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">    
-    <!-- Navigation -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark nav-container fixed-top">
         <div class="container-fluid">            
             <a class="navbar-brand logo" href="{% url 'home' %}" alt="Dog Grooming"><img id="logo" src="{% static 'images/navbar_dogicon.webp' %}"></a>
@@ -68,6 +68,11 @@
                             href="{% url 'home' %}#gallery">Gallery</a>
                     </li> 
                 </ul>   
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{% url 'booking_page' %}" class="btn btn-warning rounded-pill">Book Now</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ms-auto">    
                     {% if user.is_authenticated %} 
                     <li class="nav-item">
@@ -92,7 +97,7 @@
             </div>
         </div>
     </nav>
-    <!-- displaying Django messages -->
+    
     <div class="container">
         <div class="row message-align-fix">
         <div class="col-md-8 offset-md-2">
@@ -118,12 +123,12 @@
     <main class="d-flex main-bg">
 
         {% block content %}
-        <!-- Content Goes here -->
+        
         {% endblock content %}
 
     </main>
 
-    <!-- Footer -->
+    
     <footer class="footer mt-auto" id="contact">
         <div class="container">
            <div class="row">
@@ -202,7 +207,7 @@
               </div>                 
            </div>         
         </div>
-         <!-- Copyright -->
+        
         <div class="text-center p-3">
            <span>© 2024 Peter Mcloughlin</span>
         </div>
@@ -212,8 +217,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>   
     <script src="https://kit.fontawesome.com/4f323c782a.js" crossorigin="anonymous"></script> 
-    <script>   
-        
+    <script>       
         var map = L.map('map');    
         var marker = L.marker([51.730, -8.700]).addTo(map);   
         marker.bindPopup("<b>Here we are!</b><br>Just south of the Bandon Relief Road.").openPopup();  

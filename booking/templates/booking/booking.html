@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+{% url 'account_login' as login_url %}
 {% load crispy_forms_tags %}
 
 {% block content %}
-<!-- Submit a new booking -->
  <div class="container">
   <div class="row shadow-lg p-3 mb-4 bg-body rounded justify-content-center">
     <div class="col-md-6">
@@ -15,12 +15,12 @@
           {{ booking_form | crispy }}
           {% csrf_token %}
           <button id="submitButton" type="submit"
-            class="btn btn-signup btn-success">Book Appointment</button>  
+            class="btn btn-signup btn-success rounded-pill">Book Appointment</button>  
            |
-           <a href="{% url 'profile' %}" class="btn btn-warning" type="button"> >> Go Back</a>
+           <a href="{% url 'profile' %}" class="btn btn-warning rounded-pill" type="button"> << Go Back</a>
         </form>
         {% else %}
-        <p>Log in to make an appointment with us.</p>
+        <p>Please <a href="{% url 'account_login' %}" class="btn btn-warning rounded-pill" type="button">login</a> to make an appointment with us.</p>
         {% endif %}
       </div>
     </div>

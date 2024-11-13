@@ -15,9 +15,9 @@
           {{ form | crispy }}
           {% csrf_token %}
           <button id="submitButton" type="submit"
-            class="btn btn-signup btn-outline-success">Update Appointment</button>
+            class="btn btn-signup btn-outline-success rounded-pill">Update Appointment</button>
             |
-           <a href="{% url 'profile' %}" class="btn btn-outline-warning" type="button"> << Go Back</a>
+           <a href="{% url 'profile' %}" class="btn btn-outline-warning rounded-pill" type="button"> << Go Back</a>
         </form>
         {% else %}
         <p>Log in to make an appointment with us.</p>
