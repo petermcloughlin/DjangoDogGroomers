@@ -42,7 +42,7 @@ My user stories can be viewed on my GitbHub project [here](https://github.com/us
 - Navbar 
     -   The navbar is a responsive one utilising a responsive burgar icon on mobile and extended display on larger devices.
     ![Navbar](/documentation/Features/Navbar.PNG)
-- About
+- About Us
     - The About Us section gives some basic information about Bandon Dog Groomers its servcices and contact details for the site visitor.
     ![AboutUs](/documentation/Features/AboutUs.PNG)
 - Services
@@ -54,13 +54,33 @@ My user stories can be viewed on my GitbHub project [here](https://github.com/us
 - Footer
     -   The footer is split into three sections displaying the opening times, interactive LeafletJS map with responsive pin and contact details, which include the business address, telephone number, email address and social media icons.
     ![Footer](/documentation/Features/Footer.PNG)
-
-## Site Pages
-- HomePage
-- Login Page
-- Register Page
-- Profile Page
-- Booking Page
+- Sign Up
+    - The Sign Up page was generated using the AllAuth package in Django.
+    ![Sign Up](/documentation/Features/SignUp.PNG)
+- Sign In
+    - The sign in page was generated using the AllAuth package in Django.
+    ![Sign In](/documentation/Features/Login.PNG)
+- Sign Out
+    - The signout page was generated using the AllAuth package in Django.
+    ![Sign In](/documentation/Features/SignOut.PNG)
+- Book Now
+    - The Book Now button , when clicked will detect whether or not the user of the site is logged in or not. If not logged in, it will redirect the site user to the Login prompt page.
+    ![Book Now](/documentation/Features/BookNow.PNG)
+- Booking Form
+    - The Book Now button  , when clicked will detect whether or not the user of the site is logged in or not. If the user is logged in, it will redirect the site user to the Booking Form Page.
+    ![Booking Form](/documentation/Features/BookingForm.PNG)
+- Booking List
+    - If the user has any previously made bookings, it will display on this page when the user is logged in.
+    ![Booking List](/documentation/Features/BookingList.PNG)
+- No Bookings
+    - If the user has no bookings previously made, it will display the following;
+    ![No Bookings](/documentation/Features/BookingListEmpty.PNG)
+- Booking Update
+    - If the user wishes to update an existing booking they have listed, they will see the following update form;
+    ![Booking Update](/documentation/Features/BookingUpdateForm.PNG)
+- Booking Deletion
+    - When the user opts to delete an existing button, they will see the prompt below, asking for confirmation before coompleting the deletion of their booking.
+    ![Booking Deletion](/documentation/Features/BookingDeleteConfirm.PNG)
 
 ## Tools and Technologies
 The tools used to develop the project included the following:
