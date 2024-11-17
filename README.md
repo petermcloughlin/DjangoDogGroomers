@@ -10,6 +10,21 @@ The deployed site can be accessed [here](https://django-dog-groomers-79f623645af
 
 ## UX
 The design approach was to create a simple, user friendly site, allowing the user options to view  its content, register, login and make bookings in a seamless , simplistic way. 
+Before any coding of the site took place, as a part of the planning stage, I created an initial wireframe to conceptually build a visual display of the aplication. 
+ - Home Page
+  - ![HomePage](/documentation/Wireframes/Home_Page.PNG)
+ - Login Page
+  - ![LoginPage](/documentation/Wireframes/Login_Page.PNG)
+ - Sign Up Page
+  - ![SignUpPage](/documentation/Wireframes/Register_Page.PNG)
+ - Booking Page
+  - ![BookingPage](/documentation/Wireframes/Booking_Page.PNG)
+ - Booking Confirm
+  - ![BookingConfirm](/documentation/Wireframes/BookingConfirm_Page.PNG)
+ - Delete Booking
+  - ![DeleteBooking](/documentation/Wireframes/DeleteBooking_Page.PNG)
+ - Delete Confirm
+  - ![DeleteConfirm](/documentation/Wireframes/DeleteBookingConfirmation_Page.PNG)
 
 ## Color Scheme
 I used a combination of the following colours:
@@ -24,12 +39,21 @@ I felt these worked well visually to compliment the boostrap buttons which used 
 My user stories can be viewed on my GitbHub project [here](https://github.com/users/petermcloughlin/projects/7)
 
 ## Features
-- Navbar
-- HomePage
+- Navbar 
+    -   The navbar is a responsive one utilising a responsive burgar icon on mobile and extended display on larger devices.
+    ![Navbar](/documentation/Features/Navbar.PNG)
 - About
+    - The About Us section gives some basic information about Bandon Dog Groomers its servcices and contact details for the site visitor.
+    ![AboutUs](/documentation/Features/AboutUs.PNG)
 - Services
+    -   The Services section uses a simplistic display combining fontawesome icons, bootstrap cards and short descriptions and prices.
+    ![Services](/documentation/Features/Services.PNG)
 - Gallery
+    -   The gallery displays six .wepb images as a part of the user experience to give a visual understanding of the kind of services and treatments on offer, complimenting the services section above it.
+    ![Gallery](/documentation/Features/Gallery.PNG)
 - Footer
+    -   The footer is split into three sections displaying the opening times, interactive LeafletJS map with responsive pin and contact details, which include the business address, telephone number, email address and social media icons.
+    ![Footer](/documentation/Features/Footer.PNG)
 
 ## Site Pages
 - HomePage
@@ -41,14 +65,72 @@ My user stories can be viewed on my GitbHub project [here](https://github.com/us
 ## Tools and Technologies
 The tools used to develop the project included the following:
 ### GitPod
+This was the IDE used to write the code for the project with access was supplied by Code Institute.
+
 ### GitHub
+I used my GitHub account as a repository to save the source code for the project and to link to my GitPod wrokspace when developing the code. GitHub was used to create user stories as a part of the planning stage of the project.
+
 ### Heroku
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
+    
+DATABASE_URL - user's own value 
+DISABLE_COLLECTSTATIC - value of 1 (*this is temporary, and can be removed for the final deployment*)
+SECRET_KEY - user's own value
+
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+- Select **Automatic Deployment** from the Heroku app.
+
+Or:
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+- `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
 ### Django Framework
+Django version 4.2.16 was installed and used to scaffold the files and project structure.
 ### Python
+Python was used to code the urls.py files in both the project and app folders, the views.py, forms.py and models.py files within the booking app folder.
 ### Bootstrap 5
+Bootstrap 5 was used to style the base.html, with the following html files inheritng from this.
+- index.html
+- booking.html
+- edit.html
+- delete.html
+- profile.html
+- profile-no-booking.html
+- login.html
+- signup.html
+- logout.html
+
 ### LeafletJS
+I used LeafletJS to connect to its map's api. This map is used in the site footer to display an interactive map, displaying the business location with a responsive, clickable location pin.
+
 ### CSS
+For the most part, the site's css is governed by Bootstrap 5 , however I did create my own custom style.css file for layout and component positioning and site colour.
+
 ### HTML
+The site's html parent layout was taken care of with the base.html in the templates folder. All other pages wihtin the site inherited from this.
 
 ## Deployment
 I used [GitHub](https://github.com/) as my source control for connection to my project's workspace on GitPod. The application was successfully deployed to [Heroku](https://dashboard.heroku.com/), by following the Code Institute's instructions for app deployment to Heroku. A range of commit's to my GitHub account and deployments to Heroku were completed throughout various stages of the project implementation and coding stages.
