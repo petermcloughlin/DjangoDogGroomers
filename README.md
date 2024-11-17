@@ -39,6 +39,16 @@ My user stories can be viewed on my GitbHub project [here](https://github.com/us
 - Booking Page
 
 ## Tools and Technologies
+The tools used to develop the project included the following:
+### GitPod
+### GitHub
+### Heroku
+### Django Framework
+### Python
+### Bootstrap 5
+### LeafletJS
+### CSS
+### HTML
 
 ## Deployment
 I used [GitHub](https://github.com/) as my source control for connection to my project's workspace on GitPod. The application was successfully deployed to [Heroku](https://dashboard.heroku.com/), by following the Code Institute's instructions for app deployment to Heroku. A range of commit's to my GitHub account and deployments to Heroku were completed throughout various stages of the project implementation and coding stages.
@@ -48,9 +58,17 @@ I completed a series of manual tests on the application from accessing the site 
 I also ran some tests on the HTML, Lighthouse, CSS and Python to check for any errors in the code.
 
 ###  HTML
-I used [W3C HTML Validator](https://validator.w3.org/) to validate the base.html and index.html.
+I used [W3C HTML Validator](https://validator.w3.org/) to validate the site's html.
 
-![HTMLValidation](/documentation/HTML/HomePage.PNG)
+#### Results
+ - [HomePageValidation](/documentation/HTML/HomePage.PNG)
+ - [LoginPage](/documentation/HTML/LoginPage.PNG)
+ - [LogoutPage](/documentation/HTML/LogoutPage.PNG)
+ - [BookingPage](/documentation/HTML/BookingPage.PNG)
+ - [BookingForm](/documentation/HTML/BookingFormPage.PNG)
+ - [BookingUpdatePage](/documentation/HTML/BookingUpdatePage.PNG)
+ - [BookingDeletePage](/documentation/HTML/BookingDeletePage.PNG)
+
 
 ###  Lighthouse
 I used Google chromes Lighthouse reporting to assess the site for SEO, accessibility and performance on both mobile and desktop.
@@ -86,9 +104,12 @@ You can view the results below;
 I used Python's [CI Python Linter](https://pep8ci.herokuapp.com/) to test my .py files for PEP8 validation.
 
 #### Results:
-- [Forms](/documentation/Python/FormsTest.PNG)
-- [Models](/documentation/Python/ModelTest.PNG)
-- [Views](/documentation/Python/ViewsTest.PNG)
+- Forms
+![Forms](/documentation/Python/FormsTest.PNG)
+- Models
+![Models](/documentation/Python/ModelTest.PNG)
+- Views
+![Views](/documentation/Python/ViewsTest.PNG)
 
 ## Bugs
 A notable bug I encountered during the development of the application involved the implementation of the DateTimePicker. Initially, I encountered some issues when trying to display the DateTimePicker correctly on the Booking web page for making and updating bookings. I used some web searches such as [StackOverFlow](https://stackoverflow.com/), [Django-Docs](https://docs.djangoproject.com/en/5.1/) and Tutor support with the Code Institute to assist with its display. 
