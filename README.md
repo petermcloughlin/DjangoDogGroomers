@@ -9,7 +9,8 @@ This site was created with dog owners and their K-9 friends in mind. The purpose
 The deployed site can be accessed [here](https://django-dog-groomers-79f623645af8.herokuapp.com/) .
 
 ## UX
-The design approach was to create a simple, user friendly site, allowing the user options to view  its content, register, login and make bookings in a seamless , simplistic way. 
+### Planning
+The design approach was to create a simple, user friendly site, allowing the user options to view its content, register, login and make bookings in a seamless, simplistic way. 
 Before any coding of the site took place, as a part of the planning stage, I created an initial wireframe to conceptually build a visual display of the aplication. 
  - Home Page
   - ![HomePage](/documentation/Wireframes/Home_Page.PNG)
@@ -26,13 +27,24 @@ Before any coding of the site took place, as a part of the planning stage, I cre
  - Delete Confirm
   - ![DeleteConfirm](/documentation/Wireframes/DeleteBookingConfirmation_Page.PNG)
 
+### Entity Relationship Diagram
+Following on from the initial concept and construct of the wireframes, I needed to think about a custom model to be used for the project implementation. I opted for a simple Booking model composed of the following;
+- ID 
+- Service
+- Staff
+- Appointment
+- CreatedBy
+
+In doing so, I drew up an ERD for reference:
+- ![ERD](/documentation/ERD/ERD.png)
+
 ## Color Scheme
 I used a combination of the following colours:
 - Gold/Orange #f2b30d 
 - White #fafafa 
 - Navy #353354 
 
-I felt these worked well visually to compliment the boostrap buttons which used a .warning class and the Leaflet JS colour scheme for maps zoom control and also to compiment the colour schemes within the gallery photos,  to present an overall colour theme that looked consistent, as a user experience.
+I felt these worked well visually to compliment the bootstrap buttons which used a .warning class and the Leaflet JS colour scheme for maps zoom control and also to compliment the colour schemes within the gallery photos,  to present an overall colour theme that looked consistent, as a user experience.
 
 
 ## User Stories
@@ -43,16 +55,16 @@ My user stories can be viewed on my GitbHub project [here](https://github.com/us
     -   The navbar is a responsive one utilising a responsive burgar icon on mobile and extended display on larger devices.
     ![Navbar](/documentation/Features/Navbar.PNG)
 - About Us
-    - The About Us section gives some basic information about Bandon Dog Groomers its servcices and contact details for the site visitor.
+    - The About Us section gives some basic information about Bandon Dog Groomers its services and contact details for the site visitor.
     ![AboutUs](/documentation/Features/AboutUs.PNG)
 - Services
     -   The Services section uses a simplistic display combining fontawesome icons, bootstrap cards and short descriptions and prices.
     ![Services](/documentation/Features/Services.PNG)
 - Gallery
-    -   The gallery displays six .wepb images as a part of the user experience to give a visual understanding of the kind of services and treatments on offer, complimenting the services section above it.
+    -   The gallery displays six compressed .webp images as a part of the user experience to give a visual understanding of the kind of services and treatments on offer, complimenting the services section above it.
     ![Gallery](/documentation/Features/Gallery.PNG)
 - Footer
-    -   The footer is split into three sections displaying the opening times, interactive LeafletJS map with responsive pin and contact details, which include the business address, telephone number, email address and social media icons.
+    -   The footer is split into three sections displaying the opening times, interactive LeafletJS map with responsive pin and contact details, which includes the business address, telephone number, email address and social media icons.
     ![Footer](/documentation/Features/Footer.PNG)
 - Sign Up
     - The Sign Up page was generated using the AllAuth package in Django.
@@ -150,7 +162,7 @@ I used LeafletJS to connect to its map's api. This map is used in the site foote
 For the most part, the site's css is governed by Bootstrap 5 , however I did create my own custom style.css file for layout and component positioning and site colour.
 
 ### HTML
-The site's html parent layout was taken care of with the base.html in the templates folder. All other pages wihtin the site inherited from this.
+The site's html parent layout was taken care of with the base.html in the templates folder. All other pages within the site inherited from this.
 
 ## Deployment
 I used [GitHub](https://github.com/) as my source control for connection to my project's workspace on GitPod. The application was successfully deployed to [Heroku](https://dashboard.heroku.com/), by following the Code Institute's instructions for app deployment to Heroku. A range of commit's to my GitHub account and deployments to Heroku were completed throughout various stages of the project implementation and coding stages.
@@ -168,6 +180,7 @@ I used [W3C HTML Validator](https://validator.w3.org/) to validate the site's ht
  - [LogoutPage](/documentation/HTML/LogoutPage.PNG)
  - [BookingPage](/documentation/HTML/BookingPage.PNG)
  - [BookingForm](/documentation/HTML/BookingFormPage.PNG)
+ - [BookingList](/documentation/HTML/BookingListPage.PNG)
  - [BookingUpdatePage](/documentation/HTML/BookingUpdatePage.PNG)
  - [BookingDeletePage](/documentation/HTML/BookingDeletePage.PNG)
 
@@ -218,5 +231,6 @@ A notable bug I encountered during the development of the application involved t
 Howver, I do have another ongoing bug which I will attempt to resolve. It involves restricting the display of the Dates to weekdays and the times ranges within the 09:00 to 19:00 hours. Some solutions I found online were a little daunting for me to amend and implement so I have decided for now to list this as a known bug in my application. I hope by project 5 and beyond to have this resolved and working seamlessly for the purposes of a positive user experience and seamless integration with the data model and database.
 
 ## Summary / Reflection
-
+When approaching this project, I opted for a concept that would require a simple model, upon which the forms, views and templates could be built. My reason for doing this, was purely to give myself a greater understanding of the Django framework and how the project files, packages and folders all linked up together. Despite the simplicity, I felt that the overall look and feel of the application progressed well enough. I do hope, for Project 5 to have much better grasp of the Django framework and to implement more models , depending on the functionality of the application. As always, I would like to thank my Mentor for his advice, my family for putting up with long hours in the evenings adding and adjusting code, and thanks to Tutor support , especially on this occasion, as I did require their help at different stages of this project.
+I do hope to build bigger and better app's with Django from this point onwards, now that I have learned some of the basics, thanks to the detailed tutorials of the Code Institute.
 
