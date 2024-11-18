@@ -162,10 +162,10 @@ I used LeafletJS to connect to its map's api. This map is used in the site foote
 For the most part, the site's css is governed by Bootstrap 5 , however I did create my own custom style.css file for layout and component positioning and site colour.
 
 ### HTML
-The site's html parent layout was taken care of with the base.html in the templates folder. All other pages within the site inherited from this.
+The site's html parent layout was taken care of with the use of the base.html in the templates folder. All other pages within the site inherited from this.
 
 ## Deployment
-I used [GitHub](https://github.com/) as my source control for connection to my project's workspace on GitPod. The application was successfully deployed to [Heroku](https://dashboard.heroku.com/), by following the Code Institute's instructions for app deployment to Heroku. A range of commit's to my GitHub account and deployments to Heroku were completed throughout various stages of the project implementation and coding stages.
+I used [GitHub](https://github.com/) as my source control for connection to my project's workspace on GitPod. The application was successfully deployed to [Heroku](https://dashboard.heroku.com/), by following the Code Institute's instructions for app deployment to Heroku. A range of commits to my GitHub account and deployments to Heroku were completed throughout various stages of the project implementation and coding stages.
 
 ## Testing
 I completed a series of manual tests on the application from accessing the site manually on desktop, tablet and mobile.
@@ -231,6 +231,6 @@ A notable bug I encountered during the development of the application involved t
 Howver, I do have another ongoing bug which I will attempt to resolve. It involves restricting the display of the Dates to weekdays and the times ranges within the 09:00 to 19:00 hours. Some solutions I found online were a little daunting for me to amend and implement so I have decided for now to list this as a known bug in my application. I hope by project 5 and beyond to have this resolved and working seamlessly for the purposes of a positive user experience and seamless integration with the data model and database.
 
 ## Summary / Reflection
-When approaching this project, I opted for a concept that would require a simple model, upon which the forms, views and templates could be built. My reason for doing this, was purely to give myself a greater understanding of the Django framework and how the project files, packages and folders all linked up together. Despite the simplicity, I felt that the overall look and feel of the application progressed well enough. I do hope, for Project 5 to have much better grasp of the Django framework and to implement more models , depending on the functionality of the application. As always, I would like to thank my Mentor for his advice, my family for putting up with long hours in the evenings adding and adjusting code, and thanks to Tutor support , especially on this occasion, as I did require their help at different stages of this project.
+When approaching this project, I opted for a concept that would require a simple model, upon which the forms, views and templates could be built. My reason for doing this, was purely to give myself a greater understanding of the Django framework and how the project files, packages and folders all linked up together. Despite the simplicity, I felt that the overall look and feel of the application progressed well enough. I do hope, for Project 5 to have a much better grasp of the Django framework and to implement more models , depending on the functionality of the application. As always, I would like to thank my Mentor for his advice, my family for putting up with long hours in the evenings adding and adjusting code, and thanks to Tutor support , especially on this occasion, as I did require their help at different stages of this project.
 I do hope to build bigger and better app's with Django from this point onwards, now that I have learned some of the basics, thanks to the detailed tutorials of the Code Institute.
 
